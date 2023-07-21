@@ -28,12 +28,12 @@
     }
 </style>
 <body>
-    <canvas id="canvas" width="600" height="600"></canvas>
+    <canvas id="canvas" width="500" height="500"></canvas>
 </body>
 <script>
     const canvas =  document.getElementById('canvas')
     const ctx =  canvas.getContext('2d')
-
+    // canvas.width = windows.innerwidth-100;
 
     // fill rect 
     ctx.fillStyle = 'pink';
@@ -57,5 +57,15 @@
     ctx.fillRect(300,250,150,150);
     ctx.clearRect(315,265,120,120)
 
+
+    //filltext
+
+    ctx.font = '20px Arial';
+    ctx.fillStyle = 'purple'
+    ctx.fillText('hey there', 200,300)
+
+//stroke text
+    ctx.strokeStyle ='red'
+    ctx.strokeText('hello world',250,400)
 </script>
 </html>
