@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smiley</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        background-color: #333;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    canvas {
+        border-radius: 5px;
+        background-color: #fff;
+
+    }
+</style>
+<body>
+    <canvas id="canvas" width="500" height="500"></canvas>
+</body>
+<script>
+    const canvas =  document.getElementById('canvas')
+    const ctx =  canvas.getContext('2d');
+    canvas.width = window.innerWidth-100;
+
+    //smiley face
+
+
+    ctx.beginPath();
+    ctx.arc(340,250,150,0, Math.PI*2);
+    ctx.fillStyle = "yellow";
+    ctx.fill();
+
+    ctx.strokeStyle = "black";
+    ctx.stroke();
+
+    //eyes
+    ctx.beginPath();
+    ctx.arc(420,200,25,0, Math.PI*2);
+    ctx.fillStyle="black";
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(270,200,25,0, Math.PI*2);
+    ctx.fillStyle="black";
+    ctx.fill();
+
+
+    //mouth 
+    ctx.beginPath();
+    ctx.arc(340,280,70,0, Math.PI);
+    ctx.fillStyle = "black";
+    ctx.fill()
+</script>
+</html>
