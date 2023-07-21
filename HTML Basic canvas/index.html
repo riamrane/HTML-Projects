@@ -67,5 +67,19 @@
 //stroke text
     ctx.strokeStyle ='red'
     ctx.strokeText('hello world',250,400)
+
+
+    //lines
+    ctx.beginPath();
+    ctx.moveTo(200,150);
+    ctx.lineTo(400,150);
+    ctx.lineTo(400,250)
+    ctx.lineTo(200,250)
+    ctx.lineTo(200,150)
+    ctx.lineWidth = 5;
+    ctx.strokeStyle = 'red';
+    ctx.stroke();
+    ctx.fillStyle= 'yellow'
+    ctx.fill()
 </script>
 </html>
